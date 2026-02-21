@@ -3,57 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRPB Department Training Utilities</title>
+    <title>HRPB Department Training Utilities - Login</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-logo {
+            height: 150px;
+            width: auto;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .login-container h1 {
+            color: #4CAF50;
+            margin: 0 0 30px 0;
+            font-size: 2em;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form input {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+
+        .login-form input[type='submit'] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input[type='submit']:hover {
+            background-color: #45a049;
+            transform: scale(1.02);
+        }
+
+        .login-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .login-links a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .login-container {
+                padding: 30px;
+            }
+
+            .login-logo {
+                height: 100px;
+            }
+
+            .login-container h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="WhatsApp_Image_2026-02-21_at_7.36.29_AM-removebg-preview.png" alt="HRPB Logo" class="logo">
-            <h1>HRPB Department Training Utilities</h1>
+    <div class="login-container">
+        <img src="WhatsApp_Image_2026-02-21_at_7.36.29_AM-removebg-preview.png" alt="HRPB Logo" class="login-logo">
+        <h1>HRPB Training</h1>
+        
+        <form class="login-form" id="loginForm">
+            <input type="text" placeholder="Username" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        <div class="login-links">
+            <a href="#forgot">Forgot Password?</a>
+            <a href="superadmin.html">Admin Login</a>
+            <a href="departments.html">Departments</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="departments.html">Departments</a></li>
-                <li><a href="superadmin.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <section id="landing">
-            <h2>Welcome to HRPB Department Training System</h2>
-            <p>This is the main landing page for the HRPB Department Training Utilities.</p>
-            <p>Select your department to login and access training materials.</p>
-            <a href="departments.html" class="btn-primary">Go to Departments</a>
-        </section>
-
-        <section id="features">
-            <h2>System Features</h2>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <h3>📚 Training Courses</h3>
-                    <p>Access comprehensive training materials for your department.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>👤 User Management</h3>
-                    <p>Manage users and track their training progress.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>📊 Dashboard</h3>
-                    <p>View analytics and department performance metrics.</p>
-                </div>
-                <div class="feature-box">
-                    <h3>🔐 Secure Access</h3>
-                    <p>Secure login system for all departments and admins.</p>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <footer>
-        <p>&copy; 2026 HRPB Department Training Utilities. All rights reserved.</p>
-    </footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple demo validation
+            if (username && password) {
+                alert('Login successful! Welcome ' + username);
+                // Redirect to departments
+                window.location.href = 'departments.html';
+            }
+        });
+    </script>
 </body>
 </html>
