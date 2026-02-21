@@ -8,35 +8,52 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to HRPB Department Training Utilities</h1>
+        <div class="header-content">
+            <img src="WhatsApp_Image_2026-02-21_at_7.36.29_AM-removebg-preview.png" alt="HRPB Logo" class="logo">
+            <h1>HRPB Department Training Utilities</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#landing">Home</a></li>
-                <li><a href="#login">Login</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="superadmin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="landing">
-        <h2>Main Landing Page</h2>
-        <p>This is the main landing page for the HRPB Department Training Utilities.</p>
-    </section>
+    <div class="container">
+        <section id="landing">
+            <h2>Welcome to HRPB Department Training System</h2>
+            <p>This is the main landing page for the HRPB Department Training Utilities.</p>
+            <p>Select your department to login and access training materials.</p>
+            <a href="departments.html" class="btn-primary">Go to Departments</a>
+        </section>
 
-    <section id="login">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-        </form>
-    </section>
+        <section id="features">
+            <h2>System Features</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>📚 Training Courses</h3>
+                    <p>Access comprehensive training materials for your department.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>👤 User Management</h3>
+                    <p>Manage users and track their training progress.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>📊 Dashboard</h3>
+                    <p>View analytics and department performance metrics.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🔐 Secure Access</h3>
+                    <p>Secure login system for all departments and admins.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2026 HRPB Department Training Utilities</p>
+        <p>&copy; 2026 HRPB Department Training Utilities. All rights reserved.</p>
     </footer>
 </body>
 </html>
